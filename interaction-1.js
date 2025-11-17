@@ -57,7 +57,9 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
-    playAudio(rotx);
+    if (rotx > 1) {
+        playAudio();
+    }
 }
 
 function mousePressed() {
