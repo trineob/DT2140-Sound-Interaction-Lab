@@ -57,7 +57,7 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
-    if (rotx > 90) {
+    if (rotx > 90 && rotx < 120) {
         playAudio();
     }
     else{
