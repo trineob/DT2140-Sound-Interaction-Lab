@@ -52,7 +52,7 @@ engine.createDSP(audioContext, 1024)
 //==========================================================================================
 
 function accelerationChange(accx, accy, accz) {
-    if (accx > 20 && accx< 40) {
+    if (accx > 1 && accx < 0) {
         playAudio()
     }
     else{
