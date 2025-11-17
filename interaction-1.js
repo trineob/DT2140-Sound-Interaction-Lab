@@ -57,6 +57,7 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
+    playAudio(rotx);
 }
 
 function mousePressed() {
@@ -71,7 +72,7 @@ function deviceMoved() {
 
 function deviceTurned() {
     threshVals[1] = turnAxis;
-    playAudio();
+    //playAudio();
 }
 function deviceShaken() {
     shaketimer = millis();
@@ -109,7 +110,7 @@ function playAudio() {
     // For example if you change to a bell sound, here you could use "/churchBell/gate" instead of
     // "/thunder/rumble".
     dspNode.setParamValue("/torpedo/trigger", 1)
-    setTimeout(() => { dspNode.setParamValue("/torpedo/trigger", 0) }, 100);
+    //setTimeout(() => { dspNode.setParamValue("/torpedo/trigger", 0) }, 100);
 }
 
 //==========================================================================================
