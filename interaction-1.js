@@ -57,9 +57,12 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
-    //if (rotx > 90) {
-        //playAudio();
-    //}
+    if (rotx > 90) {
+        playAudio();
+    }
+    else{
+        stopAudio()
+    }
 }
 
 function mousePressed() {
@@ -112,9 +115,13 @@ function playAudio() {
     // For example if you change to a bell sound, here you could use "/churchBell/gate" instead of
     // "/thunder/rumble".
     dspNode.setParamValue("/torpedo/trigger", 1)
-    setTimeout(() => { dspNode.setParamValue("/torpedo/trigger", 0) }, 100);
 }
 
+
+function stopAudio()
+{
+    setTimeout(() => { dspNode.setParamValue("/torpedo/trigger", 0) }, 100);
+}
 //==========================================================================================
 // END
 //==========================================================================================
