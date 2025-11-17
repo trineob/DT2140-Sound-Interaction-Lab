@@ -60,7 +60,7 @@ function rotationChange(rotx, roty, rotz) {
 }
 
 function mousePressed() {
-    playAudio()
+    //playAudio()
     // Use this for debugging from the desktop!
 }
 
@@ -107,9 +107,8 @@ function playAudio() {
     // them printed on the console of your browser when you load the page)
     // For example if you change to a bell sound, here you could use "/churchBell/gate" instead of
     // "/thunder/rumble".
-    dspNode.setParamValue("/torpedo/gate", 1)
-    // dspNode.setParamValue("/torpedo/Freq", )
-    setTimeout(() => { dspNode.setParamValue("/torpedo/gate", 0) }, 100);
+    dspNode.setParamValue("/torpedo/trigger", 1)
+    setTimeout(() => { dspNode.setParamValue("/torpedo/trigger", 0) }, 100);
 }
 
 //==========================================================================================
