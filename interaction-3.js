@@ -113,7 +113,7 @@ function playAudio(pressure) {
 
 function stopAudio()
 {
-    setTimeout(() => { dspNode.setParamValue("/engine/trigger", 0) }, 100);
+    setTimeout(() => { dspNode.setParamValue("/engine/gate", 0) }, 100);
 }
 
 //==========================================================================================
