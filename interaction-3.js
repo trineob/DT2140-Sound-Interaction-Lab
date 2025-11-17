@@ -52,12 +52,12 @@ engine.createDSP(audioContext, 1024)
 //==========================================================================================
 
 function accelerationChange(accx, accy, accz) {
-    if (accx > 1 && accx < 0) {
+    /*if (accx > 1 && accx < 0) {
         playAudio()
     }
     else{
         stopAudio
-    }
+    }*/
 }
 
 function rotationChange(rotx, roty, rotz) {
@@ -71,6 +71,7 @@ function mousePressed() {
 function deviceMoved() {
     movetimer = millis();
     statusLabels[2].style("color", "pink");
+    playAudio()
 }
 
 function deviceTurned() {
