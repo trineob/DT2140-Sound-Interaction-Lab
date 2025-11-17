@@ -12,7 +12,7 @@ let dspNodeParams = null;
 let jsonParams = null;
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "torpedo-dsp-module.wasm";
+const dspName = "torpedo-dsp-module";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
