@@ -12,7 +12,7 @@ let dspNodeParams = null;
 let jsonParams = null;
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "churchbell-dsb-module";
+const dspName = "torpedo-dsp-module.wasm";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
@@ -53,7 +53,7 @@ instance.createDSP(audioContext, 1024)
 
 function accelerationChange(accx, accy, accz) {
     // playAudio()
-    playAudio();
+    //playAudio();
 }
 
 function rotationChange(rotx, roty, rotz) {
@@ -75,7 +75,7 @@ function deviceTurned() {
 function deviceShaken() {
     shaketimer = millis();
     statusLabels[0].style("color", "pink");
-    //playAudio();
+    playAudio();
 }
 
 function getMinMaxParam(address) {
@@ -108,6 +108,7 @@ function playAudio() {
     // For example if you change to a bell sound, here you could use "/churchBell/gate" instead of
     // "/thunder/rumble".
     dspNode.setParamValue("/torpedo/gate", 1)
+    // dspNode.setParamValue("/torpedo/Freq", )
     setTimeout(() => { dspNode.setParamValue("/torpedo/gate", 0) }, 100);
 }
 
