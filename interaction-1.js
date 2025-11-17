@@ -57,9 +57,9 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
-    if (rotx > 90) {
-        playAudio();
-    }
+    //if (rotx > 90) {
+        //playAudio();
+    //}
 }
 
 function mousePressed() {
@@ -74,7 +74,7 @@ function deviceMoved() {
 
 function deviceTurned() {
     threshVals[1] = turnAxis;
-    //playAudio();
+    playAudio();
 }
 function deviceShaken() {
     shaketimer = millis();
